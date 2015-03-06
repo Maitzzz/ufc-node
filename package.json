@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "express": "^4.10.4",
+    "fs": "0.0.2",
+    "moment": "^2.8.4",
+    "request": "^2.49.0",
+    "underscore": "^1.7.0",
+    "ws": "^0.6.5"
+  }
+}

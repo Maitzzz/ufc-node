@@ -1,0 +1,56 @@
+{
+  "type": 2,
+  "data": {
+    "status": "game",
+    "game": {
+      "id": [{"value": "2"}],
+      "uuid": [{"value": "9d657030-9342-4b11-9909-9c5d815e09ab"}],
+      "created": [{"value": "1424113140"}],
+      "field_teams": [
+        {"target_id": "3"},
+        {"target_id": "4"}
+      ]
+    },
+    "teams": {
+      "red": {
+        "5": {
+          "name": "Joo Ming",
+          "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/Klimas-website-edited_0.jpg",
+          "goals" : {
+            "1": 8,
+            "2": 1
+          }
+        },
+        "7": {
+          "name": "Ket Mahha3",
+          "score": 1,
+          "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/images-7_1.jpg",
+          "goals" : {
+            "1": 8,
+            "2": 1
+          }
+        }
+      },
+      "blue": {
+        "4": {
+          "name": "Kurvis Kraavis22",
+          "score": 1,
+          "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/tree-247122.jpg",
+          "goals" : {
+            "1": 8,
+            "2": 1
+          }
+        },
+        "6": {
+          "name": "Api Upun",
+          "score": 1,
+          "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/VST_images_the_Lagoon_Nebula_0.jpg",
+          "goals" : {
+            "1": 8,
+            "2": 1
+          }
+        }
+      }
+    }
+  }
+}
