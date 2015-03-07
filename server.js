@@ -164,7 +164,8 @@ function getRelevantData() {
 }
 
 function updateData() {
-// todo how to handle different time periods in data request for game.
+
+  // todo how to handle different time periods in data request for game.
 
   request({
     uri: drupalUrl + '/api/game/current-week',

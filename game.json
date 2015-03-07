@@ -1,6 +1,6 @@
 {
   "type": 2,
-  "data": {
+  "gameData": {
     "status": "game",
     "game": {
       "id": [{"value": "2"}],
@@ -16,7 +16,7 @@
         "5": {
           "name": "Joo Ming",
           "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/Klimas-website-edited_0.jpg",
-          "goals" : {
+          "goals": {
             "1": 8,
             "2": 1
           }
@@ -25,7 +25,7 @@
           "name": "Ket Mahha3",
           "score": 1,
           "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/images-7_1.jpg",
-          "goals" : {
+          "goals": {
             "1": 8,
             "2": 1
           }
@@ -36,7 +36,7 @@
           "name": "Kurvis Kraavis22",
           "score": 1,
           "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/tree-247122.jpg",
-          "goals" : {
+          "goals": {
             "1": 8,
             "2": 1
           }
@@ -45,12 +45,82 @@
           "name": "Api Upun",
           "score": 1,
           "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/VST_images_the_Lagoon_Nebula_0.jpg",
-          "goals" : {
+          "goals": {
             "1": 8,
             "2": 1
           }
         }
       }
     }
+  },
+  "userData": {
+    "5": {
+      "name": "Joo Ming",
+      "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/Klimas-website-edited_0.jpg",
+      "data": {
+        "totalgoals": 115,
+        "wins": 10,
+        "defeats": 11
+      }
+    },
+    "7": {
+      "name": "Ket Mahha3",
+      "score": 1,
+      "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/images-7_1.jpg",
+      "data": {
+        "totalgoals": 115,
+        "wins": 10,
+        "defeats": 11
+      }
+    },
+    "4": {
+      "name": "Kurvis Kraavis22",
+      "score": 1,
+      "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/tree-247122.jpg",
+      "data": {
+        "totalgoals": 115,
+        "wins": 10,
+        "defeats": 11
+      }
+    },
+    "6": {
+      "name": "Api Upun",
+      "score": 1,
+      "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/VST_images_the_Lagoon_Nebula_0.jpg",
+      "data": {
+        "totalgoals": 115,
+        "wins": 10,
+        "defeats": 11
+      }
+    }
+  },
+
+  "leaderboard": {
+    "6": {
+      "name": "Api Upun",
+      "score": 100,
+      "position":1,
+      "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/VST_images_the_Lagoon_Nebula_0.jpg"
+    },
+    "4": {
+      "name": "Kurvis Kraavis22",
+      "score": 90,
+      "position": 2,
+      "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/tree-247122.jpg"
+    },
+    "7": {
+      "name": "Ket Mahha3",
+      "score": 80,
+      "position": 3,
+      "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/images-7_1.jpg"
+    },
+    "5": {
+      "name": "Joo Ming",
+      "score": 70,
+      "position": 4,
+      "image": "http:\/\/ufc8.mait.fenomen.ee\/sites\/default\/files\/pictures\/Klimas-website-edited_0.jpg"
+    }
   }
 }
+
+
