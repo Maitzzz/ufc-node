@@ -1,7 +1,7 @@
 {
   "type": 2,
+  "status" : "game",
   "gameData": {
-    "status": "game",
     "game": {
       "id": [{"value": "2"}],
       "uuid": [{"value": "9d657030-9342-4b11-9909-9c5d815e09ab"}],
