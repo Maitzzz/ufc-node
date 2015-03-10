@@ -8,6 +8,7 @@ var time = 10;
 var status = 'game';
 var drupalUrl = 'fasndfask';
 var gameData =  {};
+var usersInDraw = [];
 var file = fs.readFileSync("./game.json", "utf8");
 
 app.post('/addgoal', function (req, res) {
@@ -27,7 +28,6 @@ app.post('/addgoal', function (req, res) {
     }
   });
 });
-
 
 app.get('/timer', function (req, res) {
   wss.broadcast(JSON.stringify({ type: 1, status: 'draw' }));
@@ -189,3 +189,6 @@ function updateData() {
   });
 
 }
+
+
+//  app.get('/users', middleware1, middleware2, middleware3, processRequest);
