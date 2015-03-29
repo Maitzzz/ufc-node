@@ -1,16 +1,18 @@
 var WebSocketServer = require('ws').Server;
 var wss = new WebSocketServer({port: 8080});
 var express = require('express');
-var fs= require('fs');
+var fs = require('fs');
+var request = require('request');
 var app = express();
 var timer_running = false;
-var time = 10;
+var time = 120;
 var status = 'game';
 var bodyParser = require('body-parser');
 var drupalUrl = 'fasndfask';
 var gameData =  {};
 var _ = require ('underscore');
 var usersInDraw = [];
+var util = require('util');
 var registered = false;
 var file = fs.readFileSync("./game.json", "utf8");
 
@@ -78,8 +80,9 @@ app.get('/timer-end', function(res, req)  {
   wss.broadcast(JSON.stringify({ status: 'en'}))
 });
 
-app.get('/add-user', function(res, req) {
+app.post('/add-user', function(req, res) {
   var status = _.indexOf(usersInDraw, req.body.email);
+  console.log(status);
 
   if (status != -1) {
     console.log('Kasutaja osaleb juba loosimises');
@@ -92,8 +95,8 @@ app.get('/add-user', function(res, req) {
 });
 
 app.post('/participating', function(req, res) {
-  console.log(req.body);
   var status = _.indexOf(usersInDraw, req.body.email);
+  console.log(status + 'participating');
   if (status != -1) {
     res.send(true);
   } else {
@@ -104,6 +107,7 @@ app.post('/participating', function(req, res) {
 
 app.post('/remove-user', function(req, res){
   var index =_.indexOf(usersInDraw, req.body.email);
+  console.log(index + 'remove-user');
   delete usersInDraw[index];
   res.send(true);
 });
@@ -111,7 +115,14 @@ app.post('/remove-user', function(req, res){
 app.get('/status', function(req, res) {
   var file2 = fs.readFileSync("./game.json", "utf8");
   wss.broadcast(JSON.stringify(file2));
-  res.send('gamedata sent!')
+  res.send(file2)
+});
+
+app.get('/get-players', function (req, res) {
+  var newArray = usersInDraw.filter(function(v){return v!==''});
+  var count_end = newArray.length;
+
+  res.send('Participants: ' + util.inspect(usersInDraw) + ' ' + 'Count_end: ' +count_end + '   Count');
 });
 
 var server = app.listen(8081, function () {
@@ -131,17 +142,6 @@ wss.on('connection', function connection(ws) {
     if(message.event == 'getData') {
       wss.broadcast(JSON.stringify({ type: 1, status: status}));
         wss.broadcast(JSON.stringify(getRelevantData()));
-
-     /*   getRelevantData2(function(err, data) {
-          if(data) {
-            wss.broadcast(JSON.stringify({ type: 1, status: 'game', data: data}));
-          }
-        });*/
-
-    }
-
-    if(message.event == 'userData') {
-
     }
   });
 });
@@ -159,7 +159,6 @@ function timer() {
           if(data) {
             usersInDraw = [];
             wss.broadcast(JSON.stringify({ type: 1, status: 'game', data: data}));
-
           }
         });
 
@@ -195,7 +194,6 @@ function getRelevantData() {
 }
 
 function updateData() {
-
   // todo how to handle different time periods in data request for game.
 
   request({
